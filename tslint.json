@@ -1,0 +1,148 @@
+{
+	"extends": "tslint:latest",
+	"rules": {
+		"align": [
+			false
+		],
+		"indent": [
+			true,
+			"tabs"
+		],
+		"interface-name": [
+			false
+		],
+		"linebreak-style": [
+			true,
+			"LF"
+		],
+		"max-file-line-count": [
+			true,
+			1000
+		],
+		"member-access": [
+			true,
+			"check-accessor",
+			"check-constructor"
+		],
+		"member-ordering": [
+			true,
+			{
+				"order": [
+					"public-static-field",
+					"protected-static-field",
+					"private-static-field",
+					"public-instance-field",
+					"protected-instance-field",
+					"private-instance-field",
+					"public-static-method",
+					"protected-static-method",
+					"private-static-method",
+					"constructor",
+					"public-instance-method",
+					"protected-instance-method",
+					"private-instance-method"
+				]
+			}
+		],
+		"newline-before-return": true,
+		"no-bitwise": false,
+		"no-conditional-assignment": false,
+		"no-non-null-assertion": true,
+		"no-parameter-properties": true,
+		"no-reference-import": true,
+		"no-string-literal": false,
+		"no-trailing-whitespace": false,
+		"no-unnecessary-callback-wrapper": true,
+		"no-unused-expression": false,
+		"object-literal-sort-keys": false,
+		"one-line": [
+			false
+		],
+		"prefer-function-over-method": [
+			true,
+			"allow-public",
+			"allow-protected"
+		],
+		"prefer-method-signature": true,
+		"prefer-template": [
+			true,
+			"allow-single-concat"
+		],
+		"quotemark": [
+			true,
+			"single",
+			"jsx-double",
+			"avoid-escape"
+		],
+		"typedef": [
+			true,
+			"call-signature",
+			"parameter",
+			"arrow-parameter",
+			"property-declaration"
+		],
+		"variable-name": [
+			true,
+			"allow-leading-underscore",
+			"ban-keywords",
+			"check-format"
+		],
+		"whitespace": [
+			true,
+			"check-branch",
+			"check-decl",
+			"check-operator",
+			"check-module",
+			"check-separator",
+			"check-type"
+		]
+	},
+	"jsRules": {
+		"align": [
+			false
+		],
+		"indent": [
+			true,
+			"tabs"
+		],
+		"linebreak-style": [
+			true,
+			"LF"
+		],
+		"no-bitwise": false,
+		"no-conditional-assignment": false,
+		"no-string-literal": false,
+		"no-trailing-whitespace": false,
+		"no-unused-expression": false,
+		"no-unused-new": false,
+		"object-literal-sort-keys": false,
+		"one-line": [
+			false
+		],
+		"quotemark": [
+			true,
+			"single",
+			"jsx-double",
+			"avoid-escape"
+		],
+		"trailing-comma": [
+			false
+		],
+		"variable-name": [
+			true,
+			"allow-leading-underscore",
+			"allow-pascal-case",
+			"ban-keywords",
+			"check-format"
+		],
+		"whitespace": [
+			true,
+			"check-branch",
+			"check-decl",
+			"check-operator",
+			"check-module",
+			"check-separator",
+			"check-type"
+		]
+	}
+}

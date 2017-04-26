@@ -1,0 +1,47 @@
+{
+  "name": "preact-small-redux-classic",
+  "version": "0.1.0",
+  "description": "Preact bindings for Small-Redux (classic API, with Provider and connect)",
+  "main": "./es5/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint ./src/*.ts",
+    "build": "tsc",
+    "build:es5": "tsc --target es5 --outDir ./es5-esm",
+    "build:umd": "rollup -c",
+    "build:all": "npm run build && npm run build:es5 && npm run build:umd",
+    "minify": "uglifyjs ./es5/index.js -c -m -o ./es5/preact-small-redux-classic.min.js",
+    "prepublish": "npm run lint && npm run build:all && npm run minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m18ru/preact-small-redux-classic.git"
+  },
+  "keywords": [
+    "preact",
+    "redux",
+    "small",
+    "lite",
+    "classic",
+    "provider",
+    "connect"
+  ],
+  "author": "Andrey Avol Volynkin <code@m18.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/m18ru/preact-small-redux-classic/issues"
+  },
+  "homepage": "https://github.com/m18ru/preact-small-redux-classic#readme",
+  "devDependencies": {
+    "rollup": "^0.41.6",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "tslint": "^5.1.0",
+    "typescript": "^2.2.2",
+    "uglify-js": "^2.8.22"
+  },
+  "peerDependencies": {
+    "preact": ">=8",
+    "small-redux": ">=1",
+    "tslib": ">=1"
+  }
+}
