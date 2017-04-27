@@ -76,7 +76,7 @@ function connect<TStateProps extends {}, TDispatchProps extends {}, TOwnProps ex
 				);
 			}
 			
-			private mergeProps( props: TOwnProps ): TStateProps & TDispatchProps & TOwnProps
+			private mergeProps( props: TOwnProps ): TStateProps & DefaultProps & TDispatchProps & TOwnProps
 			{
 				let stateProps: TStateProps | undefined;
 				
@@ -88,7 +88,7 @@ function connect<TStateProps extends {}, TDispatchProps extends {}, TOwnProps ex
 					);
 				}
 				
-				let dispatchProps: TDispatchProps | undefined;
+				let dispatchProps: TDispatchProps | DefaultProps | undefined;
 				
 				if ( mapDispatchToProps )
 				{
@@ -96,6 +96,12 @@ function connect<TStateProps extends {}, TDispatchProps extends {}, TOwnProps ex
 						this.context.store.dispatch,
 						props,
 					);
+				}
+				else
+				{
+					dispatchProps = {
+						dispatch: this.context.store.dispatch,
+					};
 				}
 				
 				return Object.assign(
@@ -121,6 +127,18 @@ export type MapStateToProps<TStateProps, TOwnProps> =
  */
 export type MapDispatchToProps<TDispatchProps, TOwnProps> =
 	( dispatch: Dispatch<any>, ownProps?: TOwnProps ) => TDispatchProps;
+
+/**
+ * Default properties.
+ */
+export interface DefaultProps
+{
+	/**
+	 * Dispatch function.
+	 * Available when `mapDispatchToProps` is omitted.
+	 */
+	dispatch: Dispatch<any>;
+}
 
 /**
  * Module.
