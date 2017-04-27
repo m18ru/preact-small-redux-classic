@@ -11,4 +11,5 @@ export {
 	default as connect,
 	MapStateToProps,
 	MapDispatchToProps,
+	DefaultProps,
 } from './connect';
