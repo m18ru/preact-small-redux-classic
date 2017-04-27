@@ -1,4 +1,4 @@
-import {Component, ComponentConstructor, FunctionalComponent, h} from 'preact';
+import {Component, ComponentConstructor, ComponentProps, h} from 'preact';
 import {Dispatch, Unsubscribe} from 'small-redux';
 import {ProviderContext} from './Provider';
 
@@ -138,6 +138,16 @@ export interface DefaultProps
 	 * Available when `mapDispatchToProps` is omitted.
 	 */
 	dispatch: Dispatch<any>;
+}
+
+/**
+ * Functional component (with strict props).
+ */
+export interface FunctionalComponent<PropsType>
+{
+	(props: PropsType & ComponentProps<this>, context?: any): JSX.Element;
+	displayName?: string;
+	defaultProps?: any;
 }
 
 /**
