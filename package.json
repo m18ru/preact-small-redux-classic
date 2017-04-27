@@ -1,6 +1,6 @@
 {
   "name": "preact-small-redux-classic",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Preact bindings for Small-Redux (classic API, with Provider and connect)",
   "main": "./es5/index.js",
   "module": "./es5-esm/index.js",
