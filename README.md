@@ -93,6 +93,7 @@ Or specify alias in Webpack config:
 * `connect` — connects a Preact component to a Redux store.
 * `MapStateToProps` [TS] — type of a function to map state properties into the component’s props.
 * `MapDispatchToProps` [TS] — type of a function to map dispatch functions into the component’s props.
+* `DefaultProps` [TS] — type of default props of connected component (`dispatch` property, when `mapDispatchToProps` is omitted).
 
 The `connect` function implements only this basic interface:
 
@@ -184,3 +185,7 @@ const App = <Provider store={store}>
 render( App, document.body );
 
 ```
+
+## Changelog
+
+[View changelog](CHANGELOG.md).
