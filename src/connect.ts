@@ -105,6 +105,7 @@ function connect<TStateProps extends {}, TDispatchProps extends {}, TOwnProps ex
 				}
 				
 				return Object.assign(
+					{},
 					props,
 					stateProps,
 					dispatchProps,
